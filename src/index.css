@@ -1,8 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
-@custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
-  --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
+  --animate-spotlight: spotlight 1s ease 0.15s 1 forwards;
+}
+
+@theme {
+  --color-background: hsl(var(--background));
+  --font-display: "Roboto", "sans-serif";
+}
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --spot1: #fcc737;
+    --spot2: #ea91ba;
+    --spot3: #a6f1e0;
+  }
+  .dark {
+    --background: 222 47% 4%;
+    --spot1: white;
+    --spot2: #b33791;
+    --spot3: #4b70f5;
+  }
+
+  html {
+    font-family: var(--font-display);
+  }
+  body {
+    @apply bg-background;
+  }
 }
 
 @keyframes spotlight {
