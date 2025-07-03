@@ -16,7 +16,7 @@ export const HomeSection = () => {
             </span>
             <span className="text-main opacity-0 animate-fade-in-delay-2">
               {" "}
-              Nhi Nguyen{" "}
+              Nhi!!{" "}
             </span>
           </h1>
 

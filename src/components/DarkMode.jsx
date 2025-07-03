@@ -2,7 +2,7 @@ import { Sun, Moon } from "lucide-react";
 import React, { useEffect, useState } from "react";
 
 export const DarkMode = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
   useEffect(() => {
     const mode = localStorage.getItem("theme");
     if (mode === "dark") {

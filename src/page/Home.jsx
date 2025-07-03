@@ -16,7 +16,7 @@ export const Home = () => {
       {/* introduction section */}
       <HomeSection />
 
-      {/* <About /> */}
+      <About />
       {/* skill section */}
 
       {/* experience section */}
