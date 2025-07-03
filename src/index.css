@@ -3,12 +3,14 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
-  --animate-spotlight: spotlight 1s ease 0.15s 1 forwards;
+  --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
 }
 
 @theme {
   --color-background: hsl(var(--background));
   --font-display: "Roboto", "sans-serif";
+  --color-primary: hsl(var(--primary));
+  --color-general: hsl(var(--general));
 
   --animate-meteor: meteor 6s linear infinite;
 
@@ -32,12 +34,18 @@
     --spot1: #fcc737;
     --spot2: #ea91ba;
     --spot3: #a6f1e0;
+    --primary: #f7374f;
+    --general: #212121;
+    --border-color: #f35467;
   }
   .dark {
     --background: 222 47% 4%;
     --spot1: white;
     --spot2: #b33791;
     --spot3: #4b70f5;
+    --primary: #8650aa;
+    --general: #f2f2f2;
+    --border-color: #f2f2f2;
   }
 
   html {
@@ -68,4 +76,16 @@
 @utility meteor {
   @apply absolute bg-linear-to-r from-white via-[#8B5DFF] to-[#4635B1] rounded-full;
   box-shadow: 0 0 8px 5px rgba(255, 255, 255, 0.3);
+}
+
+@utility text-shade {
+  @apply relative;
+  text-shadow: 0 0 8px rgba(165, 140, 250, 0.5);
+}
+
+@layer components {
+  .text-main {
+    @apply bg-gradient-to-bl from-[#D91656] to-[#EE66A6] bg-clip-text text-transparent;
+    @apply dark:from-violet-800 dark:to-fuchsia-400;
+  }
 }

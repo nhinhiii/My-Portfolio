@@ -1,6 +1,7 @@
 import React from "react";
 import { Background } from "../components/Background";
 import { DarkMode } from "../components/DarkMode";
+import Narbar from "../components/Narbar";
 
 export const Home = () => {
   return (
@@ -8,6 +9,7 @@ export const Home = () => {
       {/* open section */}
       <DarkMode />
       <Background />
+      <Narbar />
       {/* introduction section */}
 
       {/* skill section */}
