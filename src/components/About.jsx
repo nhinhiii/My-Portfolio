@@ -1,6 +1,20 @@
 import React from "react";
+import { motion } from "motion/react";
 
 export const About = () => {
+  const slideInLeft = {
+    initial: { x: -100, opacity: 0 },
+    whileInView: { x: 0, opacity: 1 },
+    transition: { duration: 0.8, ease: "easeOut" },
+    viewport: { once: true, amount: 0.3 },
+  };
+
+  const slideInRight = {
+    initial: { x: 100, opacity: 0 },
+    whileInView: { x: 0, opacity: 1 },
+    transition: { duration: 0.8, ease: "easeOut" },
+    viewport: { once: true, amount: 0.3 },
+  };
   return (
     <section id="about" className="py-24 px-5 relative">
       <div className="container mx-auto max-auto max-w-5xl">
@@ -8,7 +22,7 @@ export const About = () => {
           About me
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 items-center">
-          <div className="space-y-8">
+          <motion.div {...slideInLeft} className="space-y-8">
             <p className="text-3xl text-[var(--general)]">
               {" "}
               I'm
@@ -30,15 +44,15 @@ export const About = () => {
                 webistes, and working with AI to understand people's behaviors
               </li>
             </ul>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-1">
+          <motion.div {...slideInRight} className="flex justify-center">
             <img
               src="/image/profile.png"
               alt="My profile"
-              className="ml-12 h-auto w-100 rounded-sm"
+              className="ml-12 h-auto w-80 rounded-sm"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
