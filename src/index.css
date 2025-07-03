@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
   --animate-spotlight: spotlight 1s ease 0.15s 1 forwards;
@@ -8,6 +9,22 @@
 @theme {
   --color-background: hsl(var(--background));
   --font-display: "Roboto", "sans-serif";
+
+  --animate-meteor: meteor 6s linear infinite;
+
+  @keyframes meteor {
+    0% {
+      transform: rotate(215deg) translateX(0);
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(215deg) translateX(-500px);
+      opacity: 0;
+    }
+  }
 }
 @layer base {
   :root {
@@ -24,6 +41,7 @@
   }
 
   html {
+    @apply scroll-smooth;
     font-family: var(--font-display);
   }
   body {
@@ -40,4 +58,14 @@
     opacity: 1;
     transform: translate(-50%, -40%) scale(1);
   }
+}
+
+@utility star {
+  @apply absolute rounded-full bg-white;
+  box-shadow: 0 0 8px 2px rgba(255, 255, 255, 0.5);
+}
+
+@utility meteor {
+  @apply absolute bg-linear-to-r from-white via-[#8B5DFF] to-[#4635B1] rounded-full;
+  box-shadow: 0 0 8px 5px rgba(255, 255, 255, 0.3);
 }

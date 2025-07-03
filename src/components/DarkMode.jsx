@@ -5,12 +5,14 @@ export const DarkMode = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   useEffect(() => {
     const mode = localStorage.getItem("theme");
-    if (mode === "light") {
-      setIsDarkMode(false);
-      localStorage.setItem("theme", "light");
-    } else {
+    if (mode === "dark") {
       setIsDarkMode(true);
       document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      setIsDarkMode(false);
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
     }
   }, []);
 
