@@ -26,7 +26,7 @@ const Narbar = () => {
   return (
     <nav
       className={cn(
-        "fixed left-1/2 top-8 transform -translate-x-1/2 w-[50%] max-w-4xl " +
+        "fixed z-100 left-1/2 top-8 transform -translate-x-1/2 w-[50%] max-w-4xl " +
           "border border-[var(--border-color)] rounded-full bg-white/5 dark:bg-white/5 backdrop-blur-3xl transition-colors duration-500",
         isScrolled ? "py-4 shadow-lg" : "py-5"
       )}
