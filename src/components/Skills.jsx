@@ -1,13 +1,89 @@
 import React from "react";
 
+const skills = [
+  {
+    img: "/svgIcon/html.svg",
+    title: "HTML",
+  },
+  {
+    img: "/svgIcon/css.svg",
+    title: "CSS",
+  },
+  {
+    img: "/svgIcon/tailwind.svg",
+    title: "Tailwind",
+  },
+  {
+    img: "/svgIcon/js.svg",
+    title: "JavaScript",
+  },
+  {
+    img: "/svgIcon/react.svg",
+    title: "React",
+  },
+  {
+    img: "/svgIcon/ts.svg",
+    title: "TypeScript",
+  },
+  {
+    img: "/svgIcon/nextjs.svg",
+    title: "NextJs",
+  },
+  {
+    img: "/svgIcon/python.svg",
+    title: "Python",
+  },
+  {
+    img: "/svgIcon/java.svg",
+    title: "Java",
+  },
+  {
+    img: "/svgIcon/node.svg",
+    title: "NodeJS",
+  },
+  {
+    img: "/svgIcon/express.svg",
+    title: "ExpressJs",
+  },
+  {
+    img: "/svgIcon/postgreSQL.svg",
+    title: "PostgreSQL",
+  },
+  {
+    img: "/svgIcon/git.svg",
+    title: "Git",
+  },
+  {
+    img: "/image/artificial-intelligence.png",
+    title: "AI/ Machine Learning",
+  },
+];
 const Skills = () => {
   return (
     <section id="skills" className="py-24 px-5 relative">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-[36px] md:text-4xl text-main font-semibold mb-20 text-center">
+        <h2 className="text-[36px] md:text-5xl text-main font-semibold mb-20 text-center">
           My skills
         </h2>
-        <div className="flex items-center space-x-8"></div>
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-col-3 lg:grid-cols-7 gap-8">
+          {skills.map((skill) => (
+            <div key={skill.title} className="flex flex-col items-center">
+              <div
+                className=" bg-white/5 dark:bg-white/5 backdrop-blur-3xl rounded-full p-2.5 flex items-center justify-center shadow-xs
+              border border-[var(--border-color)] card-hover"
+              >
+                <img
+                  src={skill.img}
+                  className="w-10 h-10 object-contain"
+                  alt={skill.title}
+                />
+              </div>
+              <div className="mt-2 text-[var(--general)] text-sm text-center">
+                {skill.title}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

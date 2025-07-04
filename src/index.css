@@ -11,6 +11,7 @@
   --font-display: "Roboto", sans-serif;
   --color-primary: hsl(var(--primary));
   --color-general: hsl(var(--general));
+  --color-card: hsl(var(--card));
   --animate-fade-in: fade-in 0.8s ease-out forwards;
   --animate-fade-in-delay-1: fade-in 0.8s ease-out 0.2s forwards;
   --animate-fade-in-delay-2: fade-in 0.8s ease-out 0.4s forwards;
@@ -53,6 +54,7 @@
     --primary: #ea5353;
     --general: #212121;
     --border-color: #f35467;
+    --card: #f57f7f;
   }
   .dark {
     --background: 222 47% 4%;
@@ -62,6 +64,7 @@
     --primary: #a633f3;
     --general: #f2f2f2;
     --border-color: #f2f2f2;
+    --card: #f2f2f2;
   }
 
   html {
@@ -123,6 +126,11 @@
 @utility design-button {
   @apply px-5 py-3 rounded-full bg-[var(--primary)] text-white font-medium transition-all
   duration-300 hover:shadow-[0_0_10px_rgba(255,180,180,1)] hover:scale-105 active:scale-95;
+}
+
+@utility card-hover {
+  @apply transition-transform duration-300 hover:scale-[1.01] hover:shadow-[0_0_10px_rgba(255,180,180,1)];
+  @apply dark:hover:shadow-[0_0_10px_rgba(242,242,242,1)];
 }
 
 @layer components {

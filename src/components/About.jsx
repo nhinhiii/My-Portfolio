@@ -18,7 +18,7 @@ export const About = () => {
   return (
     <section id="about" className="py-24 px-5 relative">
       <div className="container mx-auto max-auto max-w-5xl">
-        <h2 className="text-[36px] md:text-4xl text-main font-semibold mb-20 text-center">
+        <h2 className="text-[36px] md:text-5xl text-main font-semibold mb-20 text-center">
           About me
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 items-center">
