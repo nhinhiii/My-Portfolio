@@ -4,6 +4,7 @@ import { DarkMode } from "../components/DarkMode";
 import Narbar from "../components/Narbar";
 import { About } from "../components/About";
 import { HomeSection } from "../components/HomeSection";
+import Skills from "../components/Skills";
 
 export const Home = () => {
   return (
@@ -18,7 +19,7 @@ export const Home = () => {
 
       <About />
       {/* skill section */}
-
+      <Skills />
       {/* experience section */}
 
       {/* project section */}
