@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "motion/react";
 
 const skills = [
   {
@@ -58,6 +59,15 @@ const skills = [
     title: "AI/ Machine Learning",
   },
 ];
+const tiltCardProps = {
+  style: {
+    perspective: "1000px",
+    transformStyle: "preserve-3d",
+  },
+  whileHover: { rotateY: 15, rotateX: -20, scale: 1.15 },
+  transition: { type: "spring", stiffness: 500, damping: 40 },
+};
+
 const Skills = () => {
   return (
     <section id="skills" className="py-24 px-5 relative">
@@ -65,10 +75,11 @@ const Skills = () => {
         <h2 className="text-[36px] md:text-5xl text-main font-semibold mb-20 text-center">
           My skills
         </h2>
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-col-3 lg:grid-cols-7 gap-8">
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-3 lg:grid-cols-7 gap-8">
           {skills.map((skill) => (
             <div key={skill.title} className="flex flex-col items-center">
-              <div
+              <motion.div
+                {...tiltCardProps}
                 className=" bg-white/5 dark:bg-white/5 backdrop-blur-3xl rounded-full p-2.5 flex items-center justify-center shadow-xs
               border border-[var(--border-color)] card-hover"
               >
@@ -77,7 +88,7 @@ const Skills = () => {
                   className="w-10 h-10 object-contain"
                   alt={skill.title}
                 />
-              </div>
+              </motion.div>
               <div className="mt-2 text-[var(--general)] text-sm text-center">
                 {skill.title}
               </div>
