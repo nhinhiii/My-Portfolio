@@ -70,7 +70,7 @@ const tiltCardProps = {
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-24 px-5 relative">
+    <section id="skills" className="py-28 px-5 relative">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-[36px] md:text-5xl text-main font-semibold mb-20 text-center">
           My skills

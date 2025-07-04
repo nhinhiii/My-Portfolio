@@ -5,6 +5,7 @@ import Narbar from "../components/Narbar";
 import { About } from "../components/About";
 import { HomeSection } from "../components/HomeSection";
 import Skills from "../components/Skills";
+import { Experience } from "../components/Experience";
 
 export const Home = () => {
   return (
@@ -20,6 +21,7 @@ export const Home = () => {
       <About />
       {/* skill section */}
       <Skills />
+      <Experience />
       {/* experience section */}
 
       {/* project section */}
