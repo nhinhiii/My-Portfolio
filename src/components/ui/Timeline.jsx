@@ -21,16 +21,11 @@ export function Timeline({ data }) {
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
-    // No more md:px-10 here
     <div className="w-full font-sans" ref={containerRef}>
-      {/* we drop the big header area if you already rendered it in Experience */}
-      <div
-        ref={ref}
-        // constrain width to match your other sections
-      >
+      <div ref={ref}>
         {data.map((item, idx) => (
           <div key={idx} className="flex justify-start md:pt-40 md:gap-10">
-            {/* —— Static Left (dot + date) —— */}
+            {/* Dot and date */}
             <div className="sticky top-40 self-start max-w-xs lg:max-w-sm md:w-full flex items-center">
               <div className="absolute left-3 h-10 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
                 <div className="h-4 w-4 rounded-full bg-[var(--primary)] border-2 border-white p-2" />
@@ -48,8 +43,8 @@ export function Timeline({ data }) {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.75, ease: "easeOut" }}
             >
-              {/* mobile title */}
-              <h3 className="md:hidden text-lg font-bold text-neutral-500 dark:text-neutral-500">
+              {/* this is for mobile */}
+              <h3 className="md:hidden text-lg font-bold text-neutral-500 dark:text-neutral-500 py-5">
                 {item.title}
               </h3>
               {item.content}
@@ -57,7 +52,7 @@ export function Timeline({ data }) {
           </div>
         ))}
 
-        {/* —— gradient spine & fill animation (unchanged) —— */}
+        {/* this is the gradient line */}
         <div
           style={{ height: `${height}px` }}
           className="absolute left-8 top-0 w-[2px] overflow-hidden

@@ -50,7 +50,7 @@ export const About = () => {
             <img
               src="/image/profile.png"
               alt="My profile"
-              className="ml-12 h-auto w-80 rounded-sm card-hover"
+              className="ml-12 mt-12 h-auto w-80 rounded-sm card-hover"
             />
           </motion.div>
         </div>
