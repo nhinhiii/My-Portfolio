@@ -27,7 +27,6 @@ export function Timeline({ data }) {
       <div
         ref={ref}
         // constrain width to match your other sections
-        className="relative max-w-4xl mx-auto pb-20"
       >
         {data.map((item, idx) => (
           <div key={idx} className="flex justify-start md:pt-40 md:gap-10">
@@ -47,7 +46,7 @@ export function Timeline({ data }) {
               initial={{ opacity: 0, x: 100 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 1.2, ease: "easeOut" }}
+              transition={{ duration: 0.75, ease: "easeOut" }}
             >
               {/* mobile title */}
               <h3 className="md:hidden text-lg font-bold text-neutral-500 dark:text-neutral-500">

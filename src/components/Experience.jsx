@@ -198,8 +198,8 @@ const timelineData = rawTimeline.map((item) => ({
 // 3) Use Timeline in your section
 export const Experience = () => {
   return (
-    <section id="experience" className="px-5 py-28 relative">
-      <div className="max-w-4xl mx-auto mb-20">
+    <section id="experience" className="px-5 py-28 mb-18 relative">
+      <div className="max-w-4xl mx-auto">
         <h2 className="text-[36px] md:text-5xl text-main text-center font-semibold">
           Work Experience
         </h2>

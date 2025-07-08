@@ -75,7 +75,13 @@ const Skills = () => {
         <h2 className="text-[36px] md:text-5xl text-main font-semibold mb-20 text-center">
           My skills
         </h2>
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-3 lg:grid-cols-7 gap-8">
+        <motion.div
+          className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-3 lg:grid-cols-7 gap-8"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
           {skills.map((skill) => (
             <div key={skill.title} className="flex flex-col items-center">
               <motion.div
@@ -94,7 +100,7 @@ const Skills = () => {
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
