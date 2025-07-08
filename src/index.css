@@ -54,8 +54,6 @@
     --primary: #ea5353;
     --general: #212121;
     --border-color: #f35467;
-
-    --card: #f57f7f;
   }
   .dark {
     --background: 222 47% 4%;
@@ -65,7 +63,6 @@
     --primary: #a633f3;
     --general: #f2f2f2;
     --border-color: #f2f2f2;
-    --card: #f2f2f2;
   }
 
   html {
