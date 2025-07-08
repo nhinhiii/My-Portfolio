@@ -55,10 +55,20 @@ const Narbar = () => {
 
       <button
         onClick={() => setIsMenu((prev) => !prev)}
-        className="fixed top-4 right-20 lg:hidden p-2 text-[var(--general)] z-50"
+        className="fixed top-2 right-20 lg:hidden p-2 text-[var(--general)] z-50"
         aria-label={isMenu ? "Close" : "Open"}
       >
-        {isMenu ? <X size={22} /> : <Menu size={22} />}
+        {isMenu ? (
+          <X
+            className="cursor-pointer py-2 px-2 rounded-full backdrop-blur-md"
+            size={42}
+          />
+        ) : (
+          <Menu
+            className="cursor-pointer py-2 px-2 rounded-full backdrop-blur-md"
+            size={42}
+          />
+        )}
       </button>
       {isMenu && (
         <div

@@ -24,13 +24,13 @@ export function Timeline({ data }) {
     <div className="w-full font-sans" ref={containerRef}>
       <div ref={ref}>
         {data.map((item, idx) => (
-          <div key={idx} className="flex justify-start md:pt-40 md:gap-10">
+          <div key={idx} className="flex justify-start pt-40 gap-10">
             {/* Dot and date */}
             <div className="sticky top-40 self-start max-w-xs lg:max-w-sm md:w-full flex items-center">
               <div className="absolute left-3 h-10 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
                 <div className="h-4 w-4 rounded-full bg-[var(--primary)] border-2 border-white p-2" />
               </div>
-              <h3 className="hidden md:block text-lg md:pl-20 md:text-3xl font-bold text-neutral-500 dark:text-neutral-500">
+              <h3 className="hidden md:block text-lg md:pl-20 md:text-3xl font-bold text-neutral-500">
                 {item.title}
               </h3>
             </div>
@@ -44,10 +44,10 @@ export function Timeline({ data }) {
               transition={{ duration: 0.75, ease: "easeOut" }}
             >
               {/* this is for mobile */}
-              <h3 className="md:hidden text-lg font-bold text-neutral-500 dark:text-neutral-500 py-5">
+              <h3 className="md:hidden text-lg font-bold text-neutral-500 dark:text-neutral-500">
                 {item.title}
               </h3>
-              {item.content}
+              <div className="py-5 md:py-0">{item.content}</div>
             </motion.div>
           </div>
         ))}
