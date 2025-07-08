@@ -3,59 +3,59 @@ import { motion } from "motion/react";
 
 const skills = [
   {
-    img: "/svgIcon/html.svg",
+    img: "/My-Portfolio/svgIcon/html.svg",
     title: "HTML",
   },
   {
-    img: "/svgIcon/css.svg",
+    img: "/My-Portfolio/svgIcon/css.svg",
     title: "CSS",
   },
   {
-    img: "/svgIcon/tailwind.svg",
+    img: "/My-Portfolio/svgIcon/tailwind.svg",
     title: "Tailwind",
   },
   {
-    img: "/svgIcon/js.svg",
+    img: "/My-Portfolio/svgIcon/js.svg",
     title: "JavaScript",
   },
   {
-    img: "/svgIcon/react.svg",
+    img: "/My-Portfolio/svgIcon/react.svg",
     title: "React",
   },
   {
-    img: "/svgIcon/ts.svg",
+    img: "/My-Portfolio/svgIcon/ts.svg",
     title: "TypeScript",
   },
   {
-    img: "/svgIcon/nextjs.svg",
+    img: "/My-Portfolio/svgIcon/nextjs.svg",
     title: "NextJs",
   },
   {
-    img: "/svgIcon/python.svg",
+    img: "/My-Portfolio/svgIcon/python.svg",
     title: "Python",
   },
   {
-    img: "/svgIcon/java.svg",
+    img: "/My-Portfolio/svgIcon/java.svg",
     title: "Java",
   },
   {
-    img: "/svgIcon/node.svg",
+    img: "/My-Portfolio/svgIcon/node.svg",
     title: "NodeJS",
   },
   {
-    img: "/svgIcon/express.svg",
+    img: "/My-Portfolio/svgIcon/express.svg",
     title: "ExpressJs",
   },
   {
-    img: "/svgIcon/postgreSQL.svg",
+    img: "/My-Portfolio/svgIcon/postgreSQL.svg",
     title: "PostgreSQL",
   },
   {
-    img: "/svgIcon/git.svg",
+    img: "/My-Portfolio/svgIcon/git.svg",
     title: "Git",
   },
   {
-    img: "/image/artificial-intelligence.png",
+    img: "/My-Portfolio/image/artificial-intelligence.png",
     title: "AI/ Machine Learning",
   },
 ];

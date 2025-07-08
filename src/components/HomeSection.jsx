@@ -33,7 +33,7 @@ export const HomeSection = () => {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1, duration: 0.5 }}
-              className="pt-5"
+              className="pt-5 hover:scale-105 duration-300"
             >
               <a href="#experience" className="design-button">
                 View my work
